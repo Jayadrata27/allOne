@@ -1,0 +1,27 @@
+*{
+    margin: 01;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.box{
+    background-color: rgb(188, 1, 1);
+    display: inline-block;
+}
+.box1,.box3{
+    width: 25vw;
+    height: 40vh;
+}
+.box2,.box4{
+    width: 60vw;
+    height: 40vh;
+}
+.box2,.box4{
+    margin-left: 15vw;
+}
+.box3,.box4{
+    margin-top: 20vh;
+}

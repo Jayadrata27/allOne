@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+   padding: 5rem;
+   height: 100vh;
+   background-color: aqua;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(3,1fr);
+   gap: 4rem;
+}
+.box{
+    background-color: rgb(255, 225, 0);
+    width: 100px;
+    height: 100px;
+    transition: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+.box1:hover{
+    transform: translateX(100px);
+}
+.box2:hover{
+    transform: translateY(100px);
+}
+.box3:hover{
+    transform:perspective(300px) translateZ(100px) ;
+}
+.box4:hover{
+    transform: rotateX(360deg);
+}
+.box5:hover{
+    transform: rotateY(360deg);
+}
+.box6:hover{
+    transform: rotateZ(90deg);
+}
+.box7:hover{
+    transform: scaleX(2);
+}
+.box8:hover{
+    transform: scaleY(2);
+}
+.box9:hover{
+    transform:perspective(300px) rotateY(45deg) scaleZ(2);
+}

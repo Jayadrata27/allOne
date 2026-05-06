@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    padding: 2rem;
+    background-color: gray;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(autofill,minmax(100px,200px));
+    gap: 1rem;
+}
+.box{
+    background-color: greenyellow;
+    border: 2px black solid;
+}
+.box4,.box8{
+    background-color: yellow;
+}
+.box3,.box5,.box7{
+    background-color: red;
+}

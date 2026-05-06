@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    padding: 2rem;
+    background-color:gray;
+    height: 90vh;
+}
+.box{
+  background-color: greenyellow;
+  border: 2px black solid;
+  margin: 1rem;
+}
+.box3,.box5,.box7{
+    background-color: red;
+}
+.box4,.box8{
+    background-color: rgb(210, 210, 30);
+}
+@media (min-width:500px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .box1{
+        grid-row: 1/4;
+    }
+    .box2{
+        grid-column: 2/4;
+    }
+    .box6{
+        grid-row: 2/4;
+        grid-column: 4/5;
+    }
+}

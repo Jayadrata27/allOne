@@ -1,4 +1,4 @@
-// for in loop
+// for in loop    , in Object always use for in loop
 // const obj={
 //     name:"Joy",
 //     age:21,
@@ -137,6 +137,8 @@
 // for(key in obj2){
 //    console.log(key);
 // }
+
+
 
 
 

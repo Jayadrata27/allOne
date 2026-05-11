@@ -21,6 +21,4 @@ even.innerHTML=count;
 
 }
 
-
-
 setInterval(timer,1000);

@@ -13,7 +13,7 @@
 //     a:1,
 //     b:2
 // }
-// let obj2=structuredClone(obj1);
+// let obj2=structuredClone(obj1);           //structuredClone
 // obj2.a=20;
 // console.log(obj2,obj1);
 

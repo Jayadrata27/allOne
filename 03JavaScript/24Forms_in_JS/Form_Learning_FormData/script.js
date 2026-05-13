@@ -42,10 +42,12 @@ form.addEventListener('submit',(event)=>{
     event.preventDefault();                 //for not refreshing the page
 
     const data=new FormData(form);
-    for(value of data){                    //Iterator theke data access korar janno for-of  loop use korte hoy
-        console.log(value);
-    }    
+    // for(value of data){                    //Iterator theke data access korar janno for-of  loop use korte hoy
+    //     console.log(value);
+    // } 
     
+    console.log(Array.from(data.entries()));      //Iterator theke data access korar Array.from  use kora jay
+
 })
 
 
@@ -57,8 +59,9 @@ form.addEventListener('submit',(event)=>{
 
 
 
+
 // const form=document.querySelector("form");
-// form.addEventListener('submit',(event)=>{
+// form.addEventListener('submit',(event)=>{           // form er janno always submit event use korte hoy
 
 //      event.preventDefault();             //for not refreshing the page
     

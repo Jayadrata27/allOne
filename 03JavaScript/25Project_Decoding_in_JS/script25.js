@@ -24,13 +24,44 @@ const questionBank = [
 
 
  function RandomQuestion(){
-    const data=new Set();     //use set for unique object
-    while(data.size!=5){      //5 tar besi question show korbo na
-        const index=Math.floor(Math.random()*20);
-        data.add(questionBank[index]);
+    // const data=new Set();     //use set for unique object
+    // while(data.size!=5){      //5 tar besi question show korbo na
+    //     const index=Math.floor(Math.random()*20);
+    //     data.add(questionBank[index]);
+    // }
+    // return [...data]           //convert set into array then return 
+
+
+
+
+    // randomly sort karenge isko aaj hum log
+    // questionBank.sort(()=>Math.random()-0.5);        //arr.sort((a,b)=>a-b) |0.2-0.5 =-0.3 |0.7-0.5=0.2
+    //                                                 //+ve means a always greater than b |-ve means b always greater than a 
+    // return questionBank.slice(0,5);                //use slice
+
+
+
+
+    const arr=[];                                //try by DSA concept
+    let length=questionBank.length;
+    for(let i=0;i<5;i++){
+        const index=Math.floor(Math.random()*length);
+        arr.push(questionBank[index]);
+
+        // swap
+        [questionBank[index],questionBank[length-1]]=[questionBank[length-1],questionBank[index]];
+        length--;
     }
-    return [...data]           //convert set into array then return 
+
+     return arr;
  }
+ 
+
+
+
+
+
+
 
 
 //  select the form and insert all the elements into it

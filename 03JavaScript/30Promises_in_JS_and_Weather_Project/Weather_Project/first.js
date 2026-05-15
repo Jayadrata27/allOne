@@ -7,10 +7,10 @@ button.addEventListener('click',()=>{
 
    promise
    .then((response)=>response.json())
-   .then((data)=>updateTemp(data))                                           //use function in promise
+   .then((data)=>updateTemp(data))                                           //create function in promise
 
 
-    function updateTemp(data){                                              //use function in promise
+    function updateTemp(data){                                              //apply function in promise
        const element=document.getElementById('weatherInfo');
     //    element.innerHTML=data.current.temp_c;
        element.innerHTML=`Today's temperature ${data.current.temp_c}`; 

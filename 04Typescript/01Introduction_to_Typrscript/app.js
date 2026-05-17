@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // number
 let a = 10;
 // String
@@ -12,4 +11,4 @@ let d = true;
 let e;
 // null
 let f = null;
-//# sourceMappingURL=app.js.map
+

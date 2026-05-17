@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 //Typescript Transpiler hota hai
 let num = 10;
 let x = 10;
@@ -53,4 +52,3 @@ let obj3 = {
     position: "HR",
     id: 123
 };
-//# sourceMappingURL=first.js.map

@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+
 const obj = {
     name: "Joy",
     age: 21,
@@ -75,4 +75,3 @@ const obje = {
     id: 123
 };
 console.log(obje);
-//# sourceMappingURL=index.js.map

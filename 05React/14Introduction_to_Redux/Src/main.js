@@ -1,0 +1,19 @@
+import React from "react";
+import ReactDOM from "react-dom/client"
+import { Provider } from "react-redux";
+import stores from "./Component/Stores";
+import Counting from "./Component/Counting";
+
+function App(){
+    return(
+        <>
+           <Provider store={stores}>
+               <Counting/>
+           </Provider>
+        </>
+    )
+}
+
+
+const Root=ReactDOM.createRoot(document.getElementById("root"));
+Root.render(<App/>)

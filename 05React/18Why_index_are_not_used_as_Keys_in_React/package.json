@@ -1,0 +1,20 @@
+{
+  "name": "18why_index_are_not_used_as_keys_in_react",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Joy",
+  "type": "commonjs",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-redux": "^9.3.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}

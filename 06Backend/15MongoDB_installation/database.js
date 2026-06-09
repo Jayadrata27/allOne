@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 // import { MongoClient } from 'mongodb'
 
 // Connection URL
-// @ : %40
+// @ : %40  it means @ means to %40
 const url = 'mongodb://Joy27:Hunter%409Bhai@ac-0ki5w1z-shard-00-00.bkokgxg.mongodb.net:27017,ac-0ki5w1z-shard-00-01.bkokgxg.mongodb.net:27017,ac-0ki5w1z-shard-00-02.bkokgxg.mongodb.net:27017/?ssl=true&replicaSet=atlas-4p5yb4-shard-0&authSource=admin&appName=CoadingAdda';
 const client = new MongoClient(url);
 

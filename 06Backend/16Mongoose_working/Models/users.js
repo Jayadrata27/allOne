@@ -14,3 +14,5 @@ const { Schema } = mongoose;
 // Model ko Create === Collection create karna(Table ko create karna)
 // Class create kari 
 const User=mongoose.model("user",userSchema);    
+
+module.exports=User;

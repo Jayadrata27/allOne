@@ -45,8 +45,6 @@ main()
          console.log("Listen at port 3000");
    }) 
 
-//    const result=await User.find({name:"Joy"});
-//    console.log(result);
 })
 .catch((err) => console.log(err));
 

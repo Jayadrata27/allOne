@@ -31,12 +31,14 @@ async function main() {
   // }
 
 
+  
   // Insert a Document
   // const insertResult = await collection.insertMany([{ a: 1 }, { a: 2 }, { a: 3 }]);
   // const insertResult = await collection.insertOne({name:"Soveer",age:40});
   // console.log('Inserted documents =>', insertResult);
 
 
+  
   // Find Documents with a Query Filter
   const filteredDocs = await collection.find({ a: 3 }).toArray();
   console.log('Found documents filtered by { a: 3 } =>', filteredDocs);

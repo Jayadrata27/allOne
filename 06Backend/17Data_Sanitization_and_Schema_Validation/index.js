@@ -10,7 +10,7 @@ app.post("/register",async (req,res)=>{
     try{
        //Validate kya uske andar firstname
        //req.body ke andar data aaya hai, usmein first_name present hona chaiye 
-       //const IsAllowed=Object.keys(req.body).every((keys)=>mandatoryField.includes(keys));
+       const mandatoryField=["firstName","emailId","age"];
        const IsAllowed=mandatoryField.every((k)=>Object.keys(req.body).includes(k));
 
 

@@ -4,8 +4,13 @@ const main=require("./database");
 const User=require("./Models/users");
 const validUser=require("./utils/validateUser");
 const bcrypt=require("bcrypt");
+const cookieParser = require('cookie-parser')
+const jwt = require('jsonwebtoken');
 
 app.use(express.json());
+app.use(cookieParser())
+
+
 
 app.post("/register",async (req,res)=>{
 
@@ -28,18 +33,24 @@ app.post("/register",async (req,res)=>{
 app.post("/login",async(req,res)=>{
    try{
       // vaidate korna
-      const people=await User.findById(req.body._id);
+      // const people=await User.findById(req.body._id);
+      const people=await User.findOne({emailId:req.body.emailId});
       
 
-      if(!(req.body.emailId===people.emailId)){
-          throw new Error("Invalid credentials");
-      }
+      // if(!(req.body.emailId===people.emailId)){
+      //     throw new Error("Invalid credentials");
+      // }
 
       const IsAllowed=await bcrypt.compare(req.body.password , people.password);
 
       if(!IsAllowed){
          throw new Error("Invalid credentials");
       }
+
+      // JWT token
+      const token=jwt.sign({_id:people._id,emailId:people.emailId},"Joy@13412",{expiresIn:10});      //token generate
+
+      res.cookie("token",token);     
 
       res.send("Login Successfully");
 
@@ -54,6 +65,10 @@ app.post("/login",async(req,res)=>{
 
 app.get("/info",async (req,res)=>{
     try{
+      //   validate the user first
+       const payload=jwt.verify(req.cookies.token,"Joy@13412");
+       console.log(payload);
+
        const result=await User.find();
        res.send(result);
     }
@@ -63,9 +78,12 @@ app.get("/info",async (req,res)=>{
 })
 
 
-app.get("/user/:id",async (req,res)=>{
+app.get("/user",async (req,res)=>{
     try{
-       const result=await User.findById(req.params.id);
+       const payload=jwt.verify(req.cookies.token,"Joy@13412");
+       console.log(payload);
+
+       const result=await User.findById(payload._id);
        res.send(result);
     }
     catch(err){

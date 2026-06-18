@@ -12,6 +12,7 @@ const authRouter=require("./routes/auth");
 const userRouter=require("./routes/user");
 const commentRouter=require("./routes/comment");
 
+
 app.use(express.json());
 app.use(cookieParser())
 

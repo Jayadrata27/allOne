@@ -20,8 +20,10 @@
     if(!data.firstName.length>=3 && data.firstName.length<=20){
         throw new Error("Name should have atleast 3 char and atmost 20 char");
     }
+  
       // Password validation karenge
       // firstName min>3 max<20
       // validate email   
+  
  }
  module.exports=validUser;

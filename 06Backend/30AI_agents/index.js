@@ -84,6 +84,7 @@ ConversationHistory.push({
 while(true){
 let response=await main();
 ConversationHistory.push({role:'model',parts:[{text:response}]});
+response=response.trim();
 response=response.replace(/^```json\s*```$/g, '').trim();
 const data=JSON.parse(response);
 console.log(data);

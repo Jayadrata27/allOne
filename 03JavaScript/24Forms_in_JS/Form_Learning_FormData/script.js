@@ -42,11 +42,12 @@ form.addEventListener('submit',(event)=>{
     event.preventDefault();                 //for not refreshing the page
 
     const data=new FormData(form);
-    // for(value of data){                    //Iterator theke data access korar janno for-of  loop use korte hoy
-    //     console.log(value);
-    // } 
     
-    console.log(Array.from(data.entries()));      //Iterator theke data access korar Array.from  use kora jay
+    for(let [key,value] of data.entries()){                    //Iterator theke data access korar janno for-of  loop use korte hoy
+        console.log(key,value);
+    } 
+    
+    // console.log(Array.from(data.entries()));      //Iterator theke data access korar Array.from  use kora jay
 
 })
 

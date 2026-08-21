@@ -16,7 +16,7 @@ function App(){
 
     function sortArray(){
         Ar.sort((a,b)=>a.price-b.price);
-        setAr([...Ar]);
+        setAr([...Ar]);      //jehetu array er reference stack a store hoy tai orginal array tar copy create kore evebe store korte hoy  ***
     }
     function priceAbove1500(){
        const B=arr.filter((value)=>value.price>1500);

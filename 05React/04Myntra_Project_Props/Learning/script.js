@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
 
-const element1=<h1>Hello Coder Army</h1>
+// const element1=<h1>Hello Coder Army</h1>
 // JSX: JS Expression (Output laake de: Result Produce) : string ,number ,array
 // JSX: Statement (unko aap nahi likh sakte ) : object
 

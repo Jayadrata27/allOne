@@ -1,5 +1,4 @@
 
-let b=10;
 
 function greet(){
     let a=20;
